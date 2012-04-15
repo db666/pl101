@@ -55,6 +55,9 @@ var visit = function(startTime, accum, expr) {
     }
 };
 
+// Nodejs specific stuff for exporting functions from a given file/module
+// The way you use this is:
+// var c = require('./compiler.js'); c.compile(myexpr);
 exports.compile = function (expr) {
     var accum = [];
     visit(0, accum, expr);
